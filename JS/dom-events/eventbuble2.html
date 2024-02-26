@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY LIST</h1>
+    <div id="container">
+        <ul id="mylist">
+            <li class="item" id="first">lorem3</li>
+            <li class="item">lorem1</li>
+            <li class="item">lorem2</li>
+            <li class="item">lorem3</li>
+            <li class="item">lorem4</li>
+        </ul>
+        <button id="Addbtn">Add new item</button>
+    </div>
+    <script>
+    //    var item = document.getElementsByClassName('item');
+      
+    //    for(var i = 0;i<item.length;i++){
+    //     var element  = item[i];
+    //     element.addEventListener('click',function(event){
+    //         // console.log(event.target.innertext);
+    //         event.target.parentNode.removeChild(event.target);//to remove element
+    //     })
+    //    }
+       //adding new item using btn
+       document.getElementById('Addbtn').addEventListener('click',function(){
+        var itemparent = document.getElementById('mylist');
+        var newitem = document.createElement('li');
+        newitem.style.color = "red";
+        newitem.innerText = "i am added by recently clicking";
+        itemparent.appendChild(newitem);
+    })
+
+        //removing the element added by clicking button
+        document.getElementById('mylist').addEventListener('click',function(){
+        event.target.parentNode.removeChild(event.target);     
+        })
+       
+    </script>
+</body>
+</html>

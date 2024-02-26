@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: center;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+    }
+    .child{
+        display: inline-block;
+        /* border: 1px solid red; */
+        padding: 1rem 1rem;
+        vertical-align: middle;
+    }
+    #btn,#btnm{
+        background-color: black;
+        font-size: 50px;
+        border-radius:50% ;
+        color: white;
+        border: 5px yellow solid;
+    }
+ 
+    #txt{
+        font-size: 50px;
+    }
+  
+</style>
+<body>
+    <h1 style="text-align: center;color: tomato">counter</h1>
+    <div class="parent">
+
+        <div class="child" ><button id="btn">+</button></div>
+        
+        <div class="child" ><button id="btnm">-</button></div>
+        <div class="child"><h2>=</h2></div>
+    <div class="child" id="txt"><span id="num">0</span>
+    </div>
+</div>
+<script>
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click",()=>{
+        console.log("clicked");
+            const txt = document.querySelector("#num");
+                var num = parseInt(txt.innerText);
+                num=num+1;
+               txt.innerText =num;
+                
+       
+        
+    })
+    const btnm  = document.querySelector("#btnm");
+    btnm.addEventListener("click",()=>{
+            console.log("minus btn clicked");
+            const txt = document.querySelector("#num");
+            var num = parseInt(txt.innerText);
+            if(num>0){
+                num-=1;
+            }
+            txt.innerText = num;
+    })
+</script>
+</body>
+</html>

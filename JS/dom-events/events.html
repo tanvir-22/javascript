@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events management company</title>
+</head>
+<body>
+    <h1>hi tanvir </h1>
+    <button onclick="handlebtn()">change color</button>
+    <button id="second">Button2</button>
+    <button id="lastbtn">Button3</button>
+  <script>
+      function handlebtn(){
+     document.body.style.backgroundColor="cyan";
+        
+    }
+    var scndbtn = document.getElementById("second");
+    function handlebtn2(){
+        document.body.style.backgroundColor = "lightblue";
+    }    
+    scndbtn.onclick=handlebtn2;
+    function last(){
+        document.body.style.backgroundColor="tomato";
+    }
+    document.getElementById("lastbtn").addEventListener("click",last);
+
+  </script>
+
+    </script>
+</body>
+</html>

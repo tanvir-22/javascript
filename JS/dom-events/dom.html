@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exploring-dom</title>
+</head>
+<body>
+    <section>
+        <h1>hello dom</h1>
+        <p id="first">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, magnam?</p>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <script>
+        var n = document.getElementById('first');
+        var k = document.getElementById('second');
+        //document.getElementById("first").style.color="white";
+        //this code for inspect
+        k.style.color = 'green';
+        n.style.color = 'blue';
+    </script>
+</body>
+</html>
